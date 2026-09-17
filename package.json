@@ -4,8 +4,8 @@
   "description": "Website Coral Companion",
   "main": "index.html",
   "scripts": {
-    "dev": "npx @tailwindcss/cli -i ./input.css -o ./output.css --watch",
-    "build": "npx @tailwindcss/cli -i ./input.css -o ./output.css --minify"
+    "dev": "npx @tailwindcss/cli -i ./src/input.css -o ./public/css/style.css --watch",
+    "build": "npx @tailwindcss/cli -i ./src/input.css -o ./public/css/style.css --minify"
   },
   "repository": {
     "type": "git",

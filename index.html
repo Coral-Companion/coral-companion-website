@@ -264,15 +264,15 @@
     </div>
 
     <!-- Navigation Arrows -->
-    <button id="card-prev" aria-label="Previous card" class="absolute -left-5 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-app-surface border border-app-surface-border text-slate-200 flex items-center justify-center hover:bg-app-primary hover:text-app-button-text hover:border-app-primary transition shadow-xl z-10 focus:outline-none">
+    <button id="previous-button" aria-label="Previous card" class="absolute -left-5 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-app-surface border border-app-surface-border text-slate-200 flex items-center justify-center hover:bg-app-primary hover:text-app-button-text hover:border-app-primary transition shadow-xl z-10 focus:outline-none">
         <i class="fa-solid fa-chevron-left text-sm"></i>
     </button>
-    <button id="card-next" aria-label="Next card" class="absolute -right-5 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-app-surface border border-app-surface-border text-slate-200 flex items-center justify-center hover:bg-app-primary hover:text-app-button-text hover:border-app-primary transition shadow-xl z-10 focus:outline-none">
+    <button id="next-button" aria-label="Next card" class="absolute -right-5 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-app-surface border border-app-surface-border text-slate-200 flex items-center justify-center hover:bg-app-primary hover:text-app-button-text hover:border-app-primary transition shadow-xl z-10 focus:outline-none">
         <i class="fa-solid fa-chevron-right text-sm"></i>
     </button>
 
-    <!-- Indicator Dots (Bottom) -->
-    <div id="card-dots" class="flex items-center justify-center space-x-3 mt-8">
+    <!-- Indicator pills (Bottom) -->
+    <div id="pills" class="flex items-center justify-center space-x-3 mt-8">
         <button data-index="0" aria-label="Go to slide 1" class="w-6 h-2 rounded-full bg-app-primary transition-all duration-300 focus:outline-none"></button>
         <button data-index="1" aria-label="Go to slide 2" class="w-2 h-2 rounded-full bg-app-surface-border hover:bg-slate-500 transition-all duration-300 focus:outline-none"></button>
         <button data-index="2" aria-label="Go to slide 3" class="w-2 h-2 rounded-full bg-app-surface-border hover:bg-slate-500 transition-all duration-300 focus:outline-none"></button>
@@ -282,12 +282,12 @@
 <!-- Carousel Controller Script -->
 <script>
     document.addEventListener('DOMContentLoaded', () => {
-        const inner = document.getElementById('card-carousel-inner');
-        const slides = inner.children;
-        const prevBtn = document.getElementById('card-prev');
-        const nextBtn = document.getElementById('card-next');
-        const dotsContainer = document.getElementById('card-dots');
-        const dots = dotsContainer.querySelectorAll('button');
+        const carousel = document.getElementById('card-carousel-inner');
+        const slides = carousel.children;
+        const previousButton = document.getElementById('previous-button');
+        const nextButton = document.getElementById('next-button');
+        const pillsContainer = document.getElementById('pills');
+        const pills = pillsContainer.querySelectorAll('button');
 
         let currentIndex = 0;
         const totalSlides = slides.length;
@@ -302,10 +302,10 @@
             }
 
             // Move carousel track horizontally
-            inner.style.transform = `translateX(-${currentIndex * 100}%)`;
+            carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
 
             // Update dot pill widths & colors
-            dots.forEach((dot, idx) => {
+            pills.forEach((dot, idx) => {
                 if (idx === currentIndex) {
                     dot.classList.remove('w-2', 'bg-app-surface-border', 'hover:bg-slate-500');
                     dot.classList.add('w-6', 'bg-app-primary');
@@ -316,8 +316,8 @@
             });
         }
 
-        prevBtn.addEventListener('click', () => updateCarousel(currentIndex - 1));
-        nextBtn.addEventListener('click', () => updateCarousel(currentIndex + 1));
+        previousButton.addEventListener('click', () => updateCarousel(currentIndex - 1));
+        nextButton.addEventListener('click', () => updateCarousel(currentIndex + 1));
 
         dots.forEach(dot => {
             dot.addEventListener('click', (e) => {

@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coral Companion</title>
+    <link rel="icon" type="image/x-icon" href="assets/logo.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -41,23 +42,22 @@
 <body
     class="bg-app-bg text-app-primary-text font-sans antialiased selection:bg-app-primary selection:text-app-button-text">
 
-    <!-- Header / Navbar -->
     <header class="sticky top-0 z-50 bg-app-surface/85 backdrop-blur-md border-b border-app-surface-border">
         <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
             <div class="flex items-center space-x-3">
                 <div class="rounded-lg flex items-center justify-center">
-                    <img src="assets/icon.svg" alt="" class="h-12 w-12 transition group-hover:scale-105">
+                    <img src="assets/logo.png" alt="" class="h-12 w-12 transition group-hover:scale-105">
                 </div>
-                <span class="font-bold text-lg tracking-tight">Coral Companion</span>
+                <span class="font-bold text-lg tracking-tight"><a href="#">Coral Companion</a></span>
             </div>
             <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-300">
-                <a href="#about" class="hover:text-app-primary transition">About</a>
                 <a href="#features" class="hover:text-app-primary transition">Features</a>
+                <a href="#prototype" class="hover:text-app-primary transition">Prototype</a>
                 <a href="#collaborators" class="hover:text-app-primary transition">Collaborators</a>
                 <a href="#contact" class="hover:text-app-primary transition">Contact</a>
             </nav>
             <div class="flex items-center space-x-4">
-                <a href="https://github.com/coral-companion" target="_blank"
+                <a href="https://github.com/Coral-Companion/coral-companion" target="_blank"
                     class="hidden sm:inline-flex items-center space-x-2 text-sm bg-app-surface border border-app-button-border hover:bg-app-button-hover px-4 py-2 rounded-lg transition">
                     <i class="fa-brands fa-github text-lg"></i>
                     <span>GitHub</span>
@@ -66,7 +66,7 @@
                         group relative">
                     <a href="#" target="_blank" class="bg-app-primary hover:bg-app-primary-hover text-app-button-text font-semibold text-sm px-4 py-2 rounded-lg shadow-lg shadow-app-primary/25 transition
                                                         pointer-events-none cursor-not-allowed" aria-disabled="true">
-                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        <i class="fa-solid fa-play"></i>
                         <span>Live Prototype</span>
                     </a>
                     <div class="pointer-events-none absolute top-full left-1/2 mb-3 
@@ -87,7 +87,7 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="relative overflow-hidden pt-20 pb-24 lg:pt-32 lg:pb-36 border-b border-app-surface-border">
+    <section class="relative overflow-hidden pt-20 pb-24 lg:pt-32 lg:pb-36 border-b border-app-surface-border min-h-screen">
         <div
             class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-app-overlay/60 via-app-bg to-app-bg -z-10">
         </div>
@@ -106,10 +106,10 @@
             <div class="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4">
                 <a href="#prototype"
                     class="w-full sm:w-auto bg-app-primary hover:bg-app-primary-hover text-app-button-text font-semibold px-8 py-3.5 rounded-xl shadow-lg shadow-app-primary/25 transition flex items-center justify-center space-x-2">
-                    <i class="fa-solid fa-play"></i>
+                    <i class="text-xl fa-solid fa-compass"></i>
                     <span>Explore Prototype</span>
                 </a>
-                <!--<a href="https://github.com/coral-companion" target="_blank" class="w-full sm:w-auto bg-app-surface border border-app-button-border hover:bg-app-button-hover text-slate-200 font-medium px-8 py-3.5 rounded-xl transition flex items-center justify-center space-x-2">
+                <!--<a href="https://github.com/coral-companion/coral-companion" target="_blank" class="w-full sm:w-auto bg-app-surface border border-app-button-border hover:bg-app-button-hover text-slate-200 font-medium px-8 py-3.5 rounded-xl transition flex items-center justify-center space-x-2">
                     <i class="fa-brands fa-github"></i>
                     <span>View Repository</span>
                 </a>-->
@@ -117,8 +117,7 @@
         </div>
     </section>
 
-    <!-- About & Concept -->
-    <section id="about" class="bg-app-surface">
+    <section id="features" class="bg-app-surface">
         <div class="py-20 max-w-5xl mx-auto px-6">
             <div class="text-center mb-16">
                 <span class="text-app-primary font-semibold text-sm uppercase tracking-wider">Features</span>
@@ -172,7 +171,7 @@
                         group relative">
                     <a href="#" target="_blank" class="bg-app-primary hover:bg-app-primary-hover text-app-button-text font-semibold text-md px-4 py-2 rounded-lg shadow-lg shadow-app-primary/25 transition
                                                         pointer-events-none cursor-not-allowed" aria-disabled="true">
-                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        <i class="fa-solid fa-play"></i>
                         <span>Live Prototype</span>
                     </a>
                     <div class="pointer-events-none absolute top-full left-1/2 mb-3 
@@ -190,39 +189,146 @@
                 </div>
             </div>
 
-            <!-- Screenshot Mockups Grid -->
-            <div class="grid md:grid-cols-2 gap-8">
-                <div class="bg-app-surface border border-app-surface-border rounded-xl overflow-hidden shadow-lg">
-                    <div
-                        class="bg-app-overlay px-4 py-3 border-b border-app-surface-border flex items-center space-x-2">
-                        <div class="w-3 h-3 rounded-full bg-red-500/80"></div>
-                        <div class="w-3 h-3 rounded-full bg-yellow-500/80"></div>
-                        <div class="w-3 h-3 rounded-full bg-green-500/80"></div>
-                        <span class="text-xs text-slate-400 font-mono ml-2">coral-segmentation-overlay.png</span>
-                    </div>
-                    <div class="p-6 bg-app-bg/50 flex flex-col items-center justify-center min-h-[220px] text-center">
-                        <i class="fa-solid fa-image text-slate-600 text-4xl mb-3"></i>
-                        <p class="text-slate-400 text-sm font-medium">Screenshot Placeholder: CoralSCOP Segmentation
-                            Masks</p>
-                        <p class="text-slate-500 text-xs mt-1">Upload your survey images to view polygon overlays</p>
-                    </div>
+<!-- Wide Card Screenshot Carousel Component -->
+<div class="relative w-full max-w-5xl mx-auto px-4">
+    
+    <!-- Carousel Viewport Wrapper -->
+    <div class="overflow-hidden rounded-2xl">
+        <!-- Slides Track (Flex container that slides horizontally) -->
+        <div id="card-carousel-inner" class="flex transition-transform duration-500 ease-out space-x-6">
+
+            <!-- Card 1 -->
+            <div class="w-full flex-shrink-0 bg-app-overlay border border-app-surface-border rounded-2xl overflow-hidden shadow-2xl grid xl:grid-cols-12">
+                <!-- Wide Screenshot Area (Left / Top) -->
+                <div class="xl:col-span-9 bg-app-surface border-b xl:border-b-0 xl:border-r border-app-surface-border p-2 flex flex-col justify-center">
+                    <img src="assets/screenshot-candidates.png" alt="An image showing observations from the past matching the uploaded image" />
                 </div>
-                <div class="bg-app-surface border border-app-surface-border rounded-xl overflow-hidden shadow-lg">
-                    <div
-                        class="bg-app-overlay px-4 py-3 border-b border-app-surface-border flex items-center space-x-2">
-                        <div class="w-3 h-3 rounded-full bg-red-500/80"></div>
-                        <div class="w-3 h-3 rounded-full bg-yellow-500/80"></div>
-                        <div class="w-3 h-3 rounded-full bg-green-500/80"></div>
-                        <span class="text-xs text-slate-400 font-mono ml-2">longitudinal-history-match.png</span>
+                <!-- Explanation Area (Right / Bottom) -->
+                <div class="xl:col-span-3 p-8 flex flex-col justify-between">
+                    <div>
+                        <span class="text-app-primary text-xs font-mono uppercase tracking-wider">Observe</span>
+                        <h3 class="text-xl font-bold text-white mt-1 mb-3">Identify Coral</h3>
+                        <p class="text-slate-300 text-sm leading-relaxed mb-6">
+                            Coral Companion finds individual coral colonies in the uploaded survey image and shows you matching observations from past surveys. You can then add the image to the known coral history right away, saving you precious time.
+                        </p>
                     </div>
-                    <div class="p-6 bg-app-bg/50 flex flex-col items-center justify-center min-h-[220px] text-center">
-                        <i class="fa-solid fa-chart-line text-slate-600 text-4xl mb-3"></i>
-                        <p class="text-slate-400 text-sm font-medium">Screenshot Placeholder: Historical Match & Growth
-                            Timeline</p>
-                        <p class="text-slate-500 text-xs mt-1">Compare colony observations across dive sessions</p>
+                    <div class="text-xs text-slate-400 border-t border-app-surface-border pt-4">
+                        Tested using field survey datasets from Marine Conservation Costa Rica.
                     </div>
                 </div>
             </div>
+
+            <!-- Card 2 -->
+            <div class="w-full flex-shrink-0 bg-app-overlay border border-app-surface-border rounded-2xl overflow-hidden shadow-2xl grid xl:grid-cols-12">
+                <!-- Wide Screenshot Area (Left / Top) -->
+                <div class="xl:col-span-9 bg-app-surface border-b xl:border-b-0 xl:border-r border-app-surface-border p-2 flex flex-col justify-center">
+                    <img src="assets/screenshot-metrics.png" alt="An image showing how observations can be compared to each other." />
+                </div>
+                <!-- Explanation Area (Right / Bottom) -->
+                <div class="xl:col-span-3 p-8 flex flex-col justify-between">
+                    <div>
+                        <span class="text-app-primary text-xs font-mono uppercase tracking-wider">Monitor</span>
+                        <h3 class="text-xl font-bold text-white mt-1 mb-3">Analyse History</h3>
+                        <p class="text-slate-300 text-sm leading-relaxed mb-6">
+                            Compare observations of the same coral colony over time using calculated metrics of lightness and color or inspect the images visually for texture changes supported by image transformations, highlighting different aspects.
+                        </p>
+                    </div>
+                    <div class="text-xs text-slate-400 border-t border-app-surface-border pt-4">
+                        Save hours of spreadsheet magic and spend your time actually analysing-
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="w-full flex-shrink-0 bg-app-overlay border border-app-surface-border rounded-2xl overflow-hidden shadow-2xl grid xl:grid-cols-12">
+                <!-- Wide Screenshot Area (Left / Top) -->
+                <div class="xl:col-span-9 bg-app-surface border-b xl:border-b-0 xl:border-r border-app-surface-border p-2 flex flex-col justify-center">
+                <img src="assets/screenshot-measure.png" alt="An image how observations can be compared to each other." />
+                </div>
+                <!-- Explanation Area (Right / Bottom) -->
+                <div class="xl:col-span-3 p-8 flex flex-col justify-between">
+                    <div>
+                        <span class="text-app-primary text-xs font-mono uppercase tracking-wider">Measure</span>
+                        <h3 class="text-xl font-bold text-white mt-1 mb-3">Measure Size</h3>
+                        <p class="text-slate-300 text-sm leading-relaxed mb-6">
+                            Coral Companion detects millimeter calibration ticks from underwater reference rulers automatically. Computes dimensions to calculate diameter and planar area.
+                        </p>
+                    </div>
+                    <div class="text-xs text-slate-400 border-t border-app-surface-border pt-4">
+                        No more playing pixel tetris to measure your corals.
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Navigation Arrows -->
+    <button id="card-prev" aria-label="Previous card" class="absolute -left-5 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-app-surface border border-app-surface-border text-slate-200 flex items-center justify-center hover:bg-app-primary hover:text-app-button-text hover:border-app-primary transition shadow-xl z-10 focus:outline-none">
+        <i class="fa-solid fa-chevron-left text-sm"></i>
+    </button>
+    <button id="card-next" aria-label="Next card" class="absolute -right-5 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-app-surface border border-app-surface-border text-slate-200 flex items-center justify-center hover:bg-app-primary hover:text-app-button-text hover:border-app-primary transition shadow-xl z-10 focus:outline-none">
+        <i class="fa-solid fa-chevron-right text-sm"></i>
+    </button>
+
+    <!-- Indicator Dots (Bottom) -->
+    <div id="card-dots" class="flex items-center justify-center space-x-3 mt-8">
+        <button data-index="0" aria-label="Go to slide 1" class="w-6 h-2 rounded-full bg-app-primary transition-all duration-300 focus:outline-none"></button>
+        <button data-index="1" aria-label="Go to slide 2" class="w-2 h-2 rounded-full bg-app-surface-border hover:bg-slate-500 transition-all duration-300 focus:outline-none"></button>
+        <button data-index="2" aria-label="Go to slide 3" class="w-2 h-2 rounded-full bg-app-surface-border hover:bg-slate-500 transition-all duration-300 focus:outline-none"></button>
+    </div>
+</div>
+
+<!-- Carousel Controller Script -->
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const inner = document.getElementById('card-carousel-inner');
+        const slides = inner.children;
+        const prevBtn = document.getElementById('card-prev');
+        const nextBtn = document.getElementById('card-next');
+        const dotsContainer = document.getElementById('card-dots');
+        const dots = dotsContainer.querySelectorAll('button');
+
+        let currentIndex = 0;
+        const totalSlides = slides.length;
+
+        function updateCarousel(index) {
+            if (index < 0) {
+                currentIndex = totalSlides - 1;
+            } else if (index >= totalSlides) {
+                currentIndex = 0;
+            } else {
+                currentIndex = index;
+            }
+
+            // Move carousel track horizontally
+            inner.style.transform = `translateX(-${currentIndex * 100}%)`;
+
+            // Update dot pill widths & colors
+            dots.forEach((dot, idx) => {
+                if (idx === currentIndex) {
+                    dot.classList.remove('w-2', 'bg-app-surface-border', 'hover:bg-slate-500');
+                    dot.classList.add('w-6', 'bg-app-primary');
+                } else {
+                    dot.classList.remove('w-6', 'bg-app-primary');
+                    dot.classList.add('w-2', 'bg-app-surface-border', 'hover:bg-slate-500');
+                }
+            });
+        }
+
+        prevBtn.addEventListener('click', () => updateCarousel(currentIndex - 1));
+        nextBtn.addEventListener('click', () => updateCarousel(currentIndex + 1));
+
+        dots.forEach(dot => {
+            dot.addEventListener('click', (e) => {
+                const targetIndex = parseInt(e.currentTarget.getAttribute('data-index'));
+                updateCarousel(targetIndex);
+            });
+        });
+    });
+</script>
+
+
         </div>
     </section>
 
@@ -276,10 +382,10 @@
         <div class="max-w-xl mx-auto px-6">
             <div class="text-center mb-12">
                 <h2 class="text-3xl font-bold tracking-tight text-white mb-3">Get in Touch</h2>
-                <p class="text-slate-400 text-sm">Are you a practitioner, funder, or developer interested in Coral
-                    Companion? Drop a note below.</p>
+                <p class="text-slate-400 text-sm">Are you a practitioner, funder, or just interested in Coral
+                    Companion? We are curious to hear from you! Drop us a note below.</p>
             </div>
-            <form action="https://formspree.io/f/your-form-id" method="POST"
+            <form action="https://formspree.io/f/mkjgngyg" method="POST"
                 class="space-y-6 bg-app-surface border border-app-surface-border p-8 rounded-2xl shadow-xl">
                 <div>
                     <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Your
@@ -304,6 +410,7 @@
                 </div>
                 <button type="submit"
                     class="w-full bg-app-primary hover:bg-app-primary-hover text-app-button-text font-semibold py-3 rounded-lg shadow-lg shadow-app-primary/25 transition text-sm">
+                    <i class="fa-solid fa-paper-plane"></i>
                     Send Message
                 </button>
             </form>

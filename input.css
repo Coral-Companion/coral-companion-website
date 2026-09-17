@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+@theme {
+  /* App Backgrounds & Containers */
+  --color-app-bg: #071116;
+  --color-app-input: #071116;
+  --color-app-surface: #0b181e;
+  --color-app-surface-border: #334155;
+  --color-app-raised: #071116;
+  --color-app-raised-border: #64748b;
+  --color-app-overlay: #13262D;
+
+  /* Primary Brand Colors */
+  --color-app-primary: #2bd4bd;
+  --color-app-primary-bg: rgba(43, 212, 189, 0.1);
+  --color-app-primary-button-text: #062126;
+  --color-app-primary-hover: #5EEAD4;
+
+  /* Typography Text Colors */
+  --color-app-primary-text: #f8fafc;
+  --color-app-secondary-text: #64748b;
+
+  /* Buttons & Alerts */
+  --color-app-button-hover: #1e293b;
+  --color-app-button-border: #334155;
+  --color-app-button-text: #071116;
+  --color-app-attention: #d76a0a;
+}

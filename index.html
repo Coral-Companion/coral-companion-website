@@ -6,36 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coral Companion</title>
     <link rel="icon" type="image/x-icon" href="assets/logo.png">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        app: {
-                            bg: '#071116',
-                            input: '#071116',
-                            surface: '#0b181e',
-                            'surface-border': '#334155', // colors.slate[700]
-                            raised: '#071116',
-                            'raised-border': '#64748b', // colors.slate[500]
-                            overlay: '#13262D',
-                            primary: '#2bd4bd',
-                            'primary-bg': 'rgba(43, 212, 189, 0.1)',
-                            'primary-button-text': '#062126',
-                            'primary-hover': '#5EEAD4',
-                            'primary-text': '#f8fafc', // colors.slate[100]
-                            'secondary-text': '#64748b', // colors.slate[500]
-                            'button-hover': '#1e293b', // colors.slate[800]
-                            'button-border': '#334155', // colors.slate[700]
-                            'button-text': '#071116',
-                            attention: '#d76a0a',
-                        }
-                    }
-                }
-            }
-        }
-    </script>
+    <link rel="stylesheet" href="output.css">
+    
     <!-- Carousel Controller Script -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
@@ -436,7 +408,7 @@
             <div class="flex space-x-6">
                 <a href="https://github.com/Coral-Companion/coral-companion" target="_blank"
                     class="hover:text-slate-400 transition"><i class="fa-brands fa-github text-base"></i></a>
-                <a href="#contact" class="hover:text-slate-400 transition py-1">Contact</a>
+                <a href="#contact" class="hover:text-slate-400 transition">Contact</a>
             </div>
         </div>
     </footer>

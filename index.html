@@ -195,7 +195,7 @@
     <!-- Carousel Viewport Wrapper -->
     <div class="overflow-hidden rounded-2xl">
         <!-- Slides Track (Flex container that slides horizontally) -->
-        <div id="card-carousel-inner" class="flex transition-transform duration-500 ease-out space-x-6">
+        <div id="card-carousel-inner" class="flex transition-transform duration-500 ease-out">
 
             <!-- Card 1 -->
             <div class="w-full flex-shrink-0 bg-app-overlay border border-app-surface-border rounded-2xl overflow-hidden shadow-2xl grid xl:grid-cols-12">
@@ -234,7 +234,7 @@
                         </p>
                     </div>
                     <div class="text-xs text-slate-400 border-t border-app-surface-border pt-4">
-                        Save hours of spreadsheet magic and spend your time actually analysing-
+                        Save hours of spreadsheet magic and spend your time actually analysing actual impact of your work.
                     </div>
                 </div>
             </div>
@@ -243,7 +243,7 @@
             <div class="w-full flex-shrink-0 bg-app-overlay border border-app-surface-border rounded-2xl overflow-hidden shadow-2xl grid xl:grid-cols-12">
                 <!-- Wide Screenshot Area (Left / Top) -->
                 <div class="xl:col-span-9 bg-app-surface border-b xl:border-b-0 xl:border-r border-app-surface-border p-2 flex flex-col justify-center">
-                <img src="assets/screenshot-measure.png" alt="An image how observations can be compared to each other." />
+                    <img src="assets/screenshot-measure.png" class="rounded-xl" alt="An image how observations can be compared to each other." />
                 </div>
                 <!-- Explanation Area (Right / Bottom) -->
                 <div class="xl:col-span-3 p-8 flex flex-col justify-between">
@@ -251,7 +251,7 @@
                         <span class="text-app-primary text-xs font-mono uppercase tracking-wider">Measure</span>
                         <h3 class="text-xl font-bold text-white mt-1 mb-3">Measure Size</h3>
                         <p class="text-slate-300 text-sm leading-relaxed mb-6">
-                            Coral Companion detects millimeter calibration ticks from underwater reference rulers automatically. Computes dimensions to calculate diameter and planar area.
+                            Coral Companion detects millimeter ticks from underwater reference rulers automatically. Computes dimensions to calculate diameter and planar area.
                         </p>
                     </div>
                     <div class="text-xs text-slate-400 border-t border-app-surface-border pt-4">
@@ -304,14 +304,14 @@
             // Move carousel track horizontally
             carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
 
-            // Update dot pill widths & colors
-            pills.forEach((dot, idx) => {
+            // Update pill widths & colors
+            pills.forEach((pill, idx) => {
                 if (idx === currentIndex) {
-                    dot.classList.remove('w-2', 'bg-app-surface-border', 'hover:bg-slate-500');
-                    dot.classList.add('w-6', 'bg-app-primary');
+                    pill.classList.remove('w-2', 'bg-app-surface-border', 'hover:bg-slate-500');
+                    pill.classList.add('w-6', 'bg-app-primary');
                 } else {
-                    dot.classList.remove('w-6', 'bg-app-primary');
-                    dot.classList.add('w-2', 'bg-app-surface-border', 'hover:bg-slate-500');
+                    pill.classList.remove('w-6', 'bg-app-primary');
+                    pill.classList.add('w-2', 'bg-app-surface-border', 'hover:bg-slate-500');
                 }
             });
         }
@@ -319,8 +319,8 @@
         previousButton.addEventListener('click', () => updateCarousel(currentIndex - 1));
         nextButton.addEventListener('click', () => updateCarousel(currentIndex + 1));
 
-        dots.forEach(dot => {
-            dot.addEventListener('click', (e) => {
+        pills.forEach(pill => {
+            pill.addEventListener('click', (e) => {
                 const targetIndex = parseInt(e.currentTarget.getAttribute('data-index'));
                 updateCarousel(targetIndex);
             });

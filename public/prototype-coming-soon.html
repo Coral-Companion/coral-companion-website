@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coral Companion</title>
+    <link rel="icon" type="image/x-icon" href="assets/logo.png">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Carousel Controller Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const carousel = document.getElementById('card-carousel-inner');
+            const slides = carousel.children;
+            const previousButton = document.getElementById('previous-button');
+            const nextButton = document.getElementById('next-button');
+            const pillsContainer = document.getElementById('pills');
+            const pills = pillsContainer.querySelectorAll('button');
+
+            let currentIndex = 0;
+            const totalSlides = slides.length;
+
+            function updateCarousel(index) {
+                if (index < 0) {
+                    currentIndex = totalSlides - 1;
+                } else if (index >= totalSlides) {
+                    currentIndex = 0;
+                } else {
+                    currentIndex = index;
+                }
+
+                // Move carousel track horizontally
+                carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+
+                // Update pill widths & colors
+                pills.forEach((pill, idx) => {
+                    if (idx === currentIndex) {
+                        pill.classList.remove('w-2', 'bg-app-surface-border', 'hover:bg-slate-500');
+                        pill.classList.add('w-6', 'bg-app-primary');
+                    } else {
+                        pill.classList.remove('w-6', 'bg-app-primary');
+                        pill.classList.add('w-2', 'bg-app-surface-border', 'hover:bg-slate-500');
+                    }
+                });
+            }
+
+            previousButton.addEventListener('click', () => updateCarousel(currentIndex - 1));
+            nextButton.addEventListener('click', () => updateCarousel(currentIndex + 1));
+
+            pills.forEach(pill => {
+                pill.addEventListener('click', (e) => {
+                    const targetIndex = parseInt(e.currentTarget.getAttribute('data-index'));
+                    updateCarousel(targetIndex);
+                });
+            });
+        });
+    </script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body
+    class="bg-app-bg text-app-primary-text font-sans antialiased selection:bg-app-primary selection:text-app-button-text">
+
+    <header class="sticky top-0 z-50 bg-app-surface/85 backdrop-blur-md border-b border-app-surface-border">
+        <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="rounded-lg flex items-center justify-center">
+                    <img src="assets/logo.png" alt="" class="h-12 w-12 transition group-hover:scale-105">
+                </div>
+                <span class="font-bold text-lg tracking-tight"><a href="./index.html">Coral Companion</a></span>
+            </div>
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-300">
+                <a href="./index.html" class="hover:text-app-primary transition">Features</a>
+                <a href="./index.html#prototype" class="hover:text-app-primary transition">Prototype</a>
+                <a href="./index.html#collaborators" class="hover:text-app-primary transition">Collaborators</a>
+                <a href="./index.html#contact" class="hover:text-app-primary transition">Contact</a>
+            </nav>
+            <div class="flex items-center space-x-4">
+                <a href="https://github.com/Coral-Companion/coral-companion" target="_blank"
+                    class="hidden sm:inline-flex items-center space-x-2 text-sm bg-app-surface border border-app-button-border hover:bg-app-overlay px-4 py-2 rounded-lg transition">
+                    <i class="fa-brands fa-github text-lg"></i>
+                    <span>GitHub</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section
+        class="relative overflow-hidden pt-40 pb-24 lg:pt-32 lg:pb-36 border-b border-app-surface-border min-h-screen">
+        <div class="absolute inset-0 -z-10
+            bg-[radial-gradient(ellipse_at_top,_color-mix(in_srgb,_var(--color-app-overlay),_transparent)_30%,_var(--color-app-bg)_60%)]"></div>
+        </div>
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h1 class="text-3xl font-bold tracking-tight text-white mb-6 leading-tight">
+                🚛🚚🚛
+                <br/>
+                Undergoing Relocation
+            </h1>
+            <p class="text-lg sm:text-xl text-slate-300 mt-20 mb-5 max-w-2xl mx-auto leading-relaxed">
+                Coral Companion is currently relocating to a new, more sustainable home where it can grow with green energy 🌱
+            </p>
+            <a href="#contact"
+                    class="hidden sm:inline-flex items-center space-x-2 text-sm bg-app-surface border border-app-button-border hover:bg-app-overlay px-4 py-2 rounded-lg transition">
+                    <i class="fa-solid fa-bell text-lg"></i>
+                    <span>Get notified</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section id="contact" class="py-20 bg-app-overlay/40 border-t border-app-surface-border">
+        <div class="max-w-xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold tracking-tight text-white mb-3">Get Notified</h2>
+                <p class="text-slate-400 text-sm">Let us know to notify you once the prototype is live again. Don't worry, we will not send you yet another newsletter.</p>
+            </div>
+            <form action="https://formspree.io/f/mkjgngyg" method="POST"
+                class="space-y-6 bg-app-surface border border-app-surface-border p-8 rounded-2xl shadow-xl">
+                <div>
+                    <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Your
+                        Name*</label>
+                    <input type="text" name="name" required
+                        class="w-full bg-app-input border border-app-surface-border rounded-lg px-4 py-3 text-white focus:outline-none focus:border-app-primary transition text-sm"
+                        placeholder="Jane Doe">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Email
+                        Address*</label>
+                    <input type="email" name="email" required
+                        class="w-full bg-app-input border border-app-surface-border rounded-lg px-4 py-3 text-white focus:outline-none focus:border-app-primary transition text-sm"
+                        placeholder="jane@conservation.org">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Message /
+                        Comments*</label>
+                    <textarea name="message" rows="4"
+                        class="w-full bg-app-input border border-app-surface-border rounded-lg px-4 py-3 text-white focus:outline-none focus:border-app-primary transition text-sm"
+                        placeholder="Tell us how you'd like to collaborate..."></textarea>
+                </div>
+                <button type="submit"
+                    class="w-full bg-app-primary hover:bg-app-primary-hover text-app-button-text font-semibold py-3 rounded-lg shadow-lg shadow-app-primary/25 transition text-sm">
+                    <i class="fa-solid fa-paper-plane"></i>
+                    Keep me posted
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 border-t border-app-surface-border text-center text-xs text-slate-500 bg-app-bg">
+        <div
+            class="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between space-y-4 sm:space-y-0">
+            <p>&copy; 2026 Coral Companion. Open-source under Apache License, Version 2.0</p>
+            <div class="flex space-x-6">
+                <a href="https://github.com/Coral-Companion/coral-companion" target="_blank"
+                    class="hover:text-slate-400 transition"><i class="fa-brands fa-github text-base"></i></a>
+                <a href="#contact" class="hover:text-slate-400 transition">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

@@ -7,7 +7,7 @@
     <title>Coral Companion</title>
     <link rel="icon" type="image/x-icon" href="assets/logo.png">
     <link rel="stylesheet" href="css/style.css">
-    
+
     <!-- Carousel Controller Script -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
@@ -72,10 +72,11 @@
                 <span class="font-bold text-lg tracking-tight"><a href="#">Coral Companion</a></span>
             </div>
             <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-300">
-                <a href="./index.html#features" class="hover:text-app-primary transition">Features</a>
-                <a href="./index.html#prototype" class="hover:text-app-primary transition">Prototype</a>
-                <a href="./index.html#collaborators" class="hover:text-app-primary transition">Collaborators</a>
-                <a href="./index.html#contact" class="hover:text-app-primary transition">Contact</a>
+                <a href="#about" class="hover:text-app-primary transition">About</a>
+                <a href="#features" class="hover:text-app-primary transition">Features</a>
+                <a href="#prototype" class="hover:text-app-primary transition">Prototype</a>
+                <a href="#collaborators" class="hover:text-app-primary transition">Collaborators</a>
+                <a href="#contact" class="hover:text-app-primary transition">Contact</a>
             </nav>
             <div class="flex items-center space-x-4">
                 <a href="https://github.com/Coral-Companion/coral-companion" target="_blank"
@@ -84,7 +85,8 @@
                     <span>GitHub</span>
                 </a>
                 <div class="flex flex-wrap justify-center gap-4">
-                    <a href="https://preview.coralcompanion.earth/" target="_blank" class="bg-app-primary hover:bg-app-primary-hover text-app-button-text font-semibold text-sm px-4 py-2 rounded-lg shadow-lg shadow-app-primary/25 transition">
+                    <a href="https://preview.coralcompanion.earth/" target="_blank"
+                        class="bg-app-primary hover:bg-app-primary-hover text-app-button-text font-semibold text-sm px-4 py-2 rounded-lg shadow-lg shadow-app-primary/25 transition">
                         <i class="fa-solid fa-play"></i>
                         <span>Live Prototype</span>
                     </a>
@@ -94,10 +96,13 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="relative overflow-hidden pt-20 pb-24 lg:pt-32 lg:pb-36 border-b border-app-surface-border min-h-screen">
-    <div class="absolute inset-0 -z-10
-    bg-[radial-gradient(ellipse_at_top,_color-mix(in_srgb,_var(--color-app-overlay),_transparent)_30%,_var(--color-app-bg)_60%)]"></div>
-    <div class="max-w-4xl mx-auto px-6 text-center">
+    <section
+        class="relative overflow-hidden pt-20 pb-24 lg:pt-32 lg:pb-36 border-b border-app-surface-border min-h-screen">
+        <div
+            class="absolute inset-0 -z-10
+    bg-[radial-gradient(ellipse_at_top,_color-mix(in_srgb,_var(--color-app-overlay),_transparent)_30%,_var(--color-app-bg)_60%)]">
+        </div>
+        <div class="max-w-4xl mx-auto px-6 text-center">
             <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight text-white mb-6 leading-tight">
                 <span>Accessible Coral Monitoring for <span class="text-app-primary">Everyone</span><span>
             </h1>
@@ -115,20 +120,39 @@
         </div>
     </section>
 
-    <section id="features" class="bg-app-surface">
+    <section id="about" class="bg-app-surface border-b border-app-surface-border">
+        <div class="py-20 max-w-5xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-app-primary font-semibold text-sm uppercase tracking-wider">About</span>
+                <h2 class="text-3xl font-bold tracking-tight text-white mb-4">Unlock the Potential of Your Survey Data</h2>
+                <p class="text-slate-400 max-w-2xl mx-auto">
+                     We believe powerful monitoring tools should not be reserved for well-funded research institutions. Our ambition is to give practitioners the tools to generate more knowledge in less time and help organizations make better-informed decisions with limited resources.
+                </p>
+                <p class="text-slate-400 max-w-2xl mx-auto mt-3">
+                    Are you working in the marine conservation space? We're looking to interview marine conservation professionals to understand your challenges and build a tool that truly meets your needs<div class="flex flex-wrap justify-center gap-4 mt-4">
+                    <a href="#contact"
+                        class="bg-app-primary hover:bg-app-primary-hover text-app-button-text font-semibold text-md px-4 py-2 rounded-lg shadow-lg shadow-app-primary/25 transition">
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>Get in Touch</span>
+                    </a>
+                </div>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="bg-app-surface/40">
         <div class="py-20 max-w-5xl mx-auto px-6">
             <div class="text-center mb-16">
                 <span class="text-app-primary font-semibold text-sm uppercase tracking-wider">Features</span>
-                <h2 class="text-3xl font-bold tracking-tight text-white mb-4">Turn photographs into a history of
-                    individual corals</h2>
-                <p class="text-slate-400 max-w-2xl mx-auto">Leave tagging for hours, manually measuring corals and
-                    tedious spreadsheet magic in the past. Coral Companion does it for you.</p>
+                <h2 class="text-3xl font-bold tracking-tight text-white mb-4">Turn Photographs into a History of Individual Corals</h2>
+                <p class="text-slate-400 max-w-2xl mx-auto">Leave tagging for hours manually measuring corals and tedious spreadsheet magic in the past. Coral Companion does it for you.</p>
                 <div
                     class="inline-flex items-center space-x-2 bg-app-primary-bg border border-app-primary/30 text-app-primary text-xs font-semibold px-4 py-2 rounded-full mt-6">
                     <span>Under Active Development</span>
                 </div>
             </div>
-            
+
             <div class="grid md:grid-cols-3 gap-8">
                 <div class="bg-app-overlay border border-app-surface-border p-8 rounded-2xl shadow-sm">
                     <div
@@ -164,7 +188,7 @@
     </section>
 
     <!-- Prototype & Screenshots Section -->
-    <section id="prototype" class="py-20 bg-app-surface/40 border-y border-app-surface-border">
+    <section id="prototype" class="py-20 bg-app-surface border-y border-app-surface-border">
         <div class="max-w-5xl mx-auto px-6">
             <div class="text-center mb-16">
                 <span class="text-app-primary font-semibold text-sm uppercase tracking-wider">Live System</span>
@@ -173,7 +197,8 @@
                 </p>
 
                 <div class="flex flex-wrap justify-center gap-4 mt-4">
-                    <a href="https://preview.coralcompanion.earth/" class="bg-app-primary hover:bg-app-primary-hover text-app-button-text font-semibold text-md px-4 py-2 rounded-lg shadow-lg shadow-app-primary/25 transition">
+                    <a href="https://preview.coralcompanion.earth/"
+                        class="bg-app-primary hover:bg-app-primary-hover text-app-button-text font-semibold text-md px-4 py-2 rounded-lg shadow-lg shadow-app-primary/25 transition">
                         <i class="fa-solid fa-play"></i>
                         <span>Live Prototype</span>
                     </a>
@@ -341,25 +366,22 @@
             <form action="https://formspree.io/f/mkjgngyg" method="POST"
                 class="space-y-6 bg-app-surface border border-app-surface-border p-8 rounded-2xl shadow-xl">
                 <div>
-                    <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Your
-                        Name*</label>
+                    <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Your Name*</label>
                     <input type="text" name="name" required
                         class="w-full bg-app-input border border-app-surface-border rounded-lg px-4 py-3 text-white focus:outline-none focus:border-app-primary transition text-sm"
                         placeholder="Jane Doe">
                 </div>
                 <div>
-                    <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Email
-                        Address*</label>
+                    <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Email Address*</label>
                     <input type="email" name="email" required
                         class="w-full bg-app-input border border-app-surface-border rounded-lg px-4 py-3 text-white focus:outline-none focus:border-app-primary transition text-sm"
                         placeholder="jane@conservation.org">
                 </div>
                 <div>
-                    <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Message /
-                        Inquiry*</label>
+                    <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Message / Inquiry*</label>
                     <textarea name="message" rows="4" required
                         class="w-full bg-app-input border border-app-surface-border rounded-lg px-4 py-3 text-white focus:outline-none focus:border-app-primary transition text-sm"
-                        placeholder="Tell us how you'd like to collaborate..."></textarea>
+                        placeholder="Tell / ask us anything"></textarea>
                 </div>
                 <button type="submit"
                     class="w-full bg-app-primary hover:bg-app-primary-hover text-app-button-text font-semibold py-3 rounded-lg shadow-lg shadow-app-primary/25 transition text-sm">
@@ -374,7 +396,7 @@
     <footer class="py-12 border-t border-app-surface-border text-center text-xs text-slate-500 bg-app-bg">
         <div
             class="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between space-y-4 sm:space-y-0">
-            <p>&copy; 2026 Coral Companion. Open-source under Apache License, Version 2.0</p>
+            <p>2026 Coral Companion Association. Open-source under MIT License</p>
             <div class="flex space-x-6">
                 <a href="https://github.com/Coral-Companion/coral-companion" target="_blank"
                     class="hover:text-slate-400 transition"><i class="fa-brands fa-github text-base"></i></a>
